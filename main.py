@@ -22,18 +22,19 @@ month_dict = {
 #DO NOT REMOVE THIS FUNCTION
 def parse_date(user_string):
     if user_string == '-1':
-        print('')
+        string = ('')
+        return string
     else:
         date = user_string.replace(',', '').split()
         date[0] = month_dict[f"{date[0]}"]
         if int(date[1]) < 10:
             date[1] = '0' + date[1]
-        print(date[0], date[1], date[2], sep='/')
-        user_input = input()
-        parse_date(user_input)
+        string = (date[0] + '/' + date[1] + '/' + date[2])
+        return string
+
 
 #Testing
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
     user_input = input()
-    parse_date(user_input)
+    print(parse_date(user_input))
