@@ -17,17 +17,20 @@ month_dict = {
     'December': '12'
 }
 
-#def parse_month(month):
-
 #REMOVE PASS AND FIX THIS FUNCTION
 #parse_date function should return the date formatted as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
 def parse_date(user_string):
-    date = user_string.replace(',', '').split()
-    date[0] = month_dict[f"{date[0]}"]
-    if int(date[1]) < 10:
-        date[1] = '0' + date[1]
-    print(date[0], date[1], date[2], sep='/JN')
+    if user_string == '-1':
+        print('')
+    else:
+        date = user_string.replace(',', '').split()
+        date[0] = month_dict[f"{date[0]}"]
+        if int(date[1]) < 10:
+            date[1] = '0' + date[1]
+        print(date[0], date[1], date[2], sep='/')
+        user_input = input()
+        parse_date(user_input)
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
