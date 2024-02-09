@@ -20,6 +20,7 @@ month_dict = {
 #REMOVE PASS AND FIX THIS FUNCTION
 #parse_date function should return the date formatted as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
+#
 def parse_date(user_string):
     if user_string == '-1':
         string = ('')
